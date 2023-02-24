@@ -1,16 +1,17 @@
 import com.sun.jdi.LocalVariable;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.Scanner;
 
 public class Car {
     private String model;
-    private long yearOfIssue;
+    private LocalDate yearOfIssue;
     private int price;
     private Body body;
 
 
-    public Car(String model, long yearOfIssue, int price, Body body) {
+    public Car(String model, LocalDate yearOfIssue, int price, Body body) {
         this.model = model;
         this.yearOfIssue = yearOfIssue;
         this.price = price;
@@ -26,11 +27,11 @@ public class Car {
         this.model = model;
     }
 
-    public long getYearOfIssue() {
+    public LocalDate getYearOfIssue() {
         return yearOfIssue;
     }
 
-    public void setYearOfIssue(long yearOfIssue) {
+    public void setYearOfIssue(LocalDate yearOfIssue) {
         this.yearOfIssue = yearOfIssue;
     }
 
@@ -52,13 +53,11 @@ public class Car {
 
     public void determinationoYearOfManufacture() {
 
-        a = 0;
-        for (int i = 0; i < a; i++) {
-            if (a - yearOfIssue) ;
+        Period.between(getYearOfIssue(), LocalDate.now()).getYears();
 
         }
 
-    }
+
     int a = LocalDate.now().getYear();
 
 
